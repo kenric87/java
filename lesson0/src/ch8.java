@@ -33,7 +33,7 @@ public class ch8 {
     public static void main(String[] args) {
         //2.建立物件
         IcCard myCard;  //用[類別]宣告[物件名稱]
-        int i;  //相當於用[型別] 宣告[變數名稱]
+        //int i;  //相當於用[型別] 宣告[變數名稱]
 
         myCard = new IcCard(); //用[類別]生[物件]，並讓[物件名稱]myCard 指向此物件
         IcCard hisCard;

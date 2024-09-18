@@ -7,7 +7,7 @@ class IcCard{
         System.out.println("money = " + money);
     }
 
-    void 
+     
 }
 
 public class ch8practice {
