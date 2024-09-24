@@ -56,10 +56,18 @@ public class ch8practice {
         bCard = new IcCard();
         cCard = bCard;
 
+        System.out.println("aCard == bCard: " + (aCard == bCard));
+        System.out.println("bCard == cCard: "+(bCard == cCard));
 
+        // IcCard myCard = new IcCard();
+        IcCard [] manyCards = new IcCard[3];
+        manyCards[0] = new IcCard();
+        manyCards[0].id = 100;
+        manyCards[0].money = 200;
 
+        for(int j = 0; )
 
-
+        
     
     
     }
