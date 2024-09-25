@@ -13,6 +13,12 @@ class IcCard {
         money += value;
         System.out.println("加值" + value + "元成功");
     }
+    
+    //4. this.成員變數(當變數名稱相同)(有時可以增加意義及辨識度)(感覺很搞，但其實沒有)
+    void addMoney2(int money){
+        this.money += money;//此時，此money非彼money
+        System.out.println("加值" + money + "元成功");
+    }
 
     Boolean isGoodAdding (int value){
         if((value>0)&&((money + value)<=10000)){
@@ -95,6 +101,24 @@ public class Ch8_part2 {
         int yy = 5;
         int zz = 6;
 
+        //(1)[內層區域]可以看到[外層區域]的變數
+        //(2)[內層區域]不能宣告[外層區域]同名變數
+        //(3)離開[內層區域]後，[外層區域]可以宣告[失效的]同名變數
+        //(4)[同層區域]的變數名稱不能重複
+        //(5)區域變數(方法內的變數)與外部變數隔離
+        //(6)類別內的[成員變數位置]與[執行順序]無關
+        //------------------------------------------------------------------
+
+        //5.匿名陣列
+        //5-2
+        TT a1 = new TT();
+        String[] ss = {"AA", "BB", "CC"};
+        a1.showAllString(ss);
+
+        a1.showAllString(new String[] {"AA", "BB", "CC"});//不用宣告陣列，唯一目標，節省記憶體
+
+
+
 
 
     }
@@ -122,3 +146,52 @@ class TB {
 
     }
 }
+
+//5-1
+class TT {
+    void showAllString(String[] strs) {
+        for(String s: strs) {
+            System.out.println(s);
+        }
+    }
+}
+
+//6.遞迴
+//計算次方
+//(1)類別
+
+//A.  一般方法
+class RR1 {
+    long power (int x, int y) {
+        if (y <= 0)
+            return 1;
+        return x * power(x, y-1);
+    }
+}
+//B.分而治之
+class RR2 {
+    long power (int x, int y) {
+        if (y <= 0)
+            return 1;
+        if (y % 2 == 0)
+            return power(x, y/2) * power(x, y/2);
+        else //<--可以不用寫
+            return x * power(x, y/2) * power(x, y/2);
+    }
+}
+
+//(2)使用
+//在main()中，物件名稱.power(2, 8);
+
+//7.Overloading
+class GG {
+    int Area (int w, int h){
+        return w * h;
+    }
+    int Area (int t, int l, int b, int r){
+        return (r - l) * (b - t);
+    }
+}
+
+// 下周要小考(CH8)
+//記得看錄影最後 常見的三種call by reference 方法
