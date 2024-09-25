@@ -65,7 +65,7 @@ public class ch8practice {
         manyCards[0].id = 100;
         manyCards[0].money = 200;
 
-        for(int j = 0; )
+        
 
         
     
