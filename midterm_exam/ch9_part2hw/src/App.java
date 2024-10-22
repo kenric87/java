@@ -12,6 +12,7 @@ class Date{
         this.day = day;
     }
     public Date(Date d) {
+        //反正就是這邊很重要
         this.year = d.year;
         this.month = d.month;
         this.day = d.day;
@@ -33,6 +34,7 @@ class Watch{
         this.sec = sec;
     }
     public Date getNewDate() {
+        //跟這邊
         return new Date(d);
     }
     public String toString() {
