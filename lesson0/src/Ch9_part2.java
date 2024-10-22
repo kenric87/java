@@ -85,7 +85,7 @@ public class Ch9_part2 {
 
         //10.嘗試修改p2的x值
         p2.setX(7);
-        System.out.println(p2);//(x, y) = (6.0, 4.0)
+        System.out.println(p2);//(x, y) = (7.0, 4.0)
         System.out.println(c);//圓心: (x, y) = (6.0, 4.0), 半徑: 5.0
 
         //11.重點整理(傳回成員物件)
