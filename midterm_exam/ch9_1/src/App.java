@@ -74,7 +74,93 @@ class T4 {
     void setx1(int x1) {
         this.x1 = x1;
     }
+}
 
+class T5{
+    //private 子程式
+    private int x, y;
+    public T5(int x){
+        this.x = x;
+    }
+    public T5(int x, int y){
+        this(x);//跨用的建構方法要放第一行
+        this.y = y;
+    }
+    //因為x, y是private
+    //所以需要一個public的方法用以修該他們
+    public void setXY (int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+    public int getX(){
+        //這邊分開寫是因為要能順利回傳 int
+        return x;
+    }
+    public int getY(){
+        //這邊分開寫是因為要能順利回傳 int
+        return y;
+    }
+    public void showXY() {
+        System.out.println("x = " + x + ", y = " + y);
+    }
+}
+//static 共享成員變數
+class T6 {
+    private int x;
+    private static int y;
+    //在這邊是指，這個y 是大家的
+    //一個地方改，所有地方就改
+    public void setX(int x) {
+        this.x = x;
+    }
+    public void setY(int y) {
+        this.y = y;
+    }
+    public int getX(){
+        return x;
+    }
+    public int getY() {
+        return y;
+    }
+}
+class T6_st{
+    private int x;
+    private static int y;
+    
+    public T6_st(int x, int y){
+        //喔對了，就算是建構方法，也需要加上public
+        this.x = x;
+        this.y = y;
+    }
+    public String toString(){
+        return "(x, y) = (" + x + ", " + y + ")";
+    }
+}
+
+///////////////////////////////////////
+//是一些不太重要的 去看ch9_part1.java
+class T7{
+	public int x;
+	public static int y;
+	static {
+		y=100;
+	}
+}
+
+//4.static方法
+class T8{
+	public static void sayHello() {
+		System.out.println("Hello");
+	}
+	
+}
+
+//5.final
+class T9{
+	public int x;
+	public static final int y=200;
+    //final 要先給值，因為之後不能再改
+    //紀錄一下，static 跟final 並不是互相相反的性質，可以同時並存
 }
 
 public class App {
@@ -95,6 +181,49 @@ public class App {
         aT3.showInfo();
         ////////////////////////
         //來試試private的力量
+        T4 a4  = new T4();
+        // a4.x1 = 100; 這不能用，因為x1在T4中是private
+        a4.x2 = 30;
+        a4.showx2();
+        a4.setx1(10);
+        a4.showx1();
+
+        T5 a5 = new T5(30);
+        System.out.println(a5.getX());
+        a5.setXY(20, 90);
+        a5.showXY();
+        a5.setXY(20,30);
+        System.out.println(a5.getY());
         
+        T6 a6 = new T6();
+        a6.setX(20);
+        a6.setY(200);
+        System.out.println(a6.getX() + ", " + a6.getY());
+        T6 a6y = new T6();
+        a6y.setX(30);
+        a6y.setY(300);
+        System.out.println("a6y");
+        System.out.println(a6y.getX() + ", " + a6y.getY());
+        System.out.println("a6");
+        System.out.println(a6.getX() + ", " + a6.getY());
+        //因為y是共用的，所以改了的話，大家都會改
+
+        T6_st a6st = new T6_st(20, 200);
+        System.out.println("st = " + a6st);
+        T6_st a6sty = new T6_st(30, 300);
+        System.out.println("sty = " + a6sty);
+        System.out.println("st = " + a6st.toString());
+        //System.out.println("st = " + a6st);
+        //System.out.println("st = " + a6st.toString());
+        //這兩種寫法相同.toString會自動呼叫
+
+        /*虽然可以显式调用 .toString()
+        但 Java 在 print() 和 println() 方法中会自动调用它
+        因此可以省略直接使用对象
+        这是 Java 设计的简化机制之一。
+        */
+
+
+
     }
 }
