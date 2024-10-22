@@ -30,11 +30,6 @@ class Point{
 class Circle {
     private Point p;//這是自創單位Point 從副類別1來的
     private double r;
-    public double getR() {return r;}
-    public Point getP(){return p;}//需要注意，這邊的單位是Point
-    public Point gerNewP(){
-        return new Point(p);//歐幹，這邊超重要
-    }
 
     //建構方法
     public Circle(double x, double y, double r){
@@ -44,6 +39,14 @@ class Circle {
     public Circle(){
         this(0, 0, 1);//這是剛剛上面的那個建構方法
     }
+
+    public double getR() {return r;}
+    public Point getP(){return p;}//需要注意，這邊的單位是Point
+    //而且還有一個缺點，資料會相依，不好
+    public Point gerNewP(){
+        return new Point(p);//歐幹，這邊超重要
+    }
+    
     public String toString(){
         return "圓心: " + p + ", 半徑: " + r;
     }
