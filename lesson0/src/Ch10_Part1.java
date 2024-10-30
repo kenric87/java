@@ -1,5 +1,5 @@
-// Ch10 ¦r¦ê(String)_Part1 (¾Ç¥Íª©)
-//2-(1)-A °ÆÃş§O
+// Ch10 å­—ä¸²(String)_Part1 (å­¸ç”Ÿç‰ˆ)
+//2-(1)-A å‰¯é¡åˆ¥
 
 class Student {
 	String name;
@@ -13,71 +13,71 @@ class Student {
 
 public class Ch10_Part1 {
 	public static void main(String[] args) {		
-		// (¤@) ²£¥Í¦r¦ê (10-1)
-		// 0. °ò¥»¥Îªk
-		char[] test = {'³o', '¬O', '­Ó', '´ú', '¸Õ', '¦r', '¦ê'}; // 0³o1¬O2­Ó3´ú4¸Õ5¦r6¦ê
-		// µ{¦¡¡G¥|­ÓString
-		String a = new String();//«Ø¥ßªÅ¦r¦ê
-		String b = new String(test);//¥Ñ(¦r¤¸°}¦C){test}«Øºc¦r¦ê("³o¬O´ú¸Õ¦r¦ê")
-		String c = new String(test, 3, 4);//¥Ñ(¦r¤¸°}¦C){test}«Øºc¤l¦r¦ê("³o¬O´ú¸Õ¦r¦ê")
-		//²Ä3¤¸¯À«á4­Ó¦r("´ú¸Õ¦r¦ê")
-		String d = new String(b); //«Ø¥ß°Æ¥»¡A(¬Û¦P¤º®e¡A¤£¦Pª«¥ó)("³o¬O´ú¸Õ¦r¦ê")
+		// (ä¸€) ç”¢ç”Ÿå­—ä¸² (10-1)
+		// 0. åŸºæœ¬ç”¨æ³•
+		char[] test = {'é€™', 'æ˜¯', 'å€‹', 'æ¸¬', 'è©¦', 'å­—', 'ä¸²'}; // 0é€™1æ˜¯2å€‹3æ¸¬4è©¦5å­—6ä¸²
+		// ç¨‹å¼ï¼šå››å€‹String
+		String a = new String();//å»ºç«‹ç©ºå­—ä¸²
+		String b = new String(test);//ç”±(å­—å…ƒé™£åˆ—){test}å»ºæ§‹å­—ä¸²("é€™æ˜¯æ¸¬è©¦å­—ä¸²")
+		String c = new String(test, 3, 4);//ç”±(å­—å…ƒé™£åˆ—){test}å»ºæ§‹å­å­—ä¸²("é€™æ˜¯æ¸¬è©¦å­—ä¸²")
+		//ç¬¬3å…ƒç´ å¾Œ4å€‹å­—("æ¸¬è©¦å­—ä¸²")
+		String d = new String(b); //å»ºç«‹å‰¯æœ¬ï¼Œ(ç›¸åŒå…§å®¹ï¼Œä¸åŒç‰©ä»¶)("é€™æ˜¯æ¸¬è©¦å­—ä¸²")
 		
 		System.out.println("a: " + a);
 		System.out.println("b: " + b);
 		System.out.println("c: " + c);
 		System.out.println("d: " + d);
 		
-		System.out.println("b = d? " + (b == d));//false (¤£¦P°Ñ·Ó)
+		System.out.println("b = d? " + (b == d));//false (ä¸åŒåƒç…§)
 		
-		// 1. JAVA¹ïStringªº¯S§O¤ä´© (10-1-1)
-		// (1) Stringconstant (¦r­±±`¼Æ)
-		a = "³o¬O¤@­Ó´ú¸Õ¦r¦ê";//¦³(¦r­±±`¼Æ)®É¡A¨t²Î¤º³¡·|²£¥Í¤@­Ó·sªºStringª«¥ó¡AÅıa«ü¦V³o­Óª«¥ó
-		b = "³o¬O¤@­Ó´ú¸Õ¦r¦ê";//¦³(¬Û¦P)(¦r­±±`¼Æ)®É¡A¨t²Î¤º³¡(¤£·|)²£¥Í¤@­Ó·sªºStringª«¥ó¡A¥BÅıb«ü¦V¦P¤@ª«¥ó
+		// 1. JAVAå°Stringçš„ç‰¹åˆ¥æ”¯æ´ (10-1-1)
+		// (1) Stringconstant (å­—é¢å¸¸æ•¸)
+		a = "é€™æ˜¯ä¸€å€‹æ¸¬è©¦å­—ä¸²";//æœ‰(å­—é¢å¸¸æ•¸)æ™‚ï¼Œç³»çµ±å…§éƒ¨æœƒç”¢ç”Ÿä¸€å€‹æ–°çš„Stringç‰©ä»¶ï¼Œè®“aæŒ‡å‘é€™å€‹ç‰©ä»¶
+		b = "é€™æ˜¯ä¸€å€‹æ¸¬è©¦å­—ä¸²";//æœ‰(ç›¸åŒ)(å­—é¢å¸¸æ•¸)æ™‚ï¼Œç³»çµ±å…§éƒ¨(ä¸æœƒ)ç”¢ç”Ÿä¸€å€‹æ–°çš„Stringç‰©ä»¶ï¼Œä¸”è®“bæŒ‡å‘åŒä¸€ç‰©ä»¶
 
-		//¬Û¦P¤º®e¡A¬Û¦Pª«¥ó
-		c = new String("³o¬O¤@­Ó´ú¸Õ¦r¦ê");//«Ø¥ß¥I(¬Û¦P¤º®e¡A¤£¦Pª«¥ó)
+		//ç›¸åŒå…§å®¹ï¼Œç›¸åŒç‰©ä»¶
+		c = new String("é€™æ˜¯ä¸€å€‹æ¸¬è©¦å­—ä¸²");//å»ºç«‹ä»˜(ç›¸åŒå…§å®¹ï¼Œä¸åŒç‰©ä»¶)
 		
 		
-		System.out.println("a==b ?" + (a==b));//ture(°Ñ·ÓÂ¾¬Ûµ¥)
+		System.out.println("a==b ?" + (a==b));//ture(åƒç…§è·ç›¸ç­‰)
 		System.out.println("b==c ?" + (b==c));//false
 		System.out.println("a==c ?" + (a==c));//false
 
 		
-		// (2) equals()¤èªk: ¤ñ¸û¤º®e
-		System.out.println("a»Pb¤º®e¬Û¦P ?" + a.equals(b));//ture
-		System.out.println("b»Pc¤º®e¬Û¦P ?" + b.equals(c));//ture
-		System.out.println("a»Pc¤º®e¬Û¦P ?" + a.equals(c));//ture
+		// (2) equals()æ–¹æ³•: æ¯”è¼ƒå…§å®¹
+		System.out.println("aèˆ‡bå…§å®¹ç›¸åŒ? " + a.equals(b));//ture
+		System.out.println("bèˆ‡cå…§å®¹ç›¸åŒ? " + b.equals(c));//ture
+		System.out.println("aèˆ‡cå…§å®¹ç›¸åŒ? " + a.equals(c));//ture
 		
-		// (3) equalsIgnoreCase()¤èªk: ¤ñ¸û¤º®e(©¿²¤¤j¤p¼g)
+		// (3) equalsIgnoreCase()æ–¹æ³•: æ¯”è¼ƒå…§å®¹(å¿½ç•¥å¤§å°å¯«)
 		String x = "This is a TEST String";
 		String y = "This is a test string";
 		
-		System.out.println("¤À¤j¤p¼g®É, x»Py¤º®e¬Û¦P ?" + x.equals(y));//false
-		System.out.println("¤£¤À¤j¤p¼g®É, x»Py¤º®e¬Û¦P ?" + x.equalsIgnoreCase(y));//ture
+		System.out.println("åˆ†å¤§å°å¯«æ™‚, xèˆ‡yå…§å®¹ç›¸åŒ? " + x.equals(y));//false
+		System.out.println("ä¸åˆ†å¤§å°å¯«æ™‚, xèˆ‡yå…§å®¹ç›¸åŒ? " + x.equalsIgnoreCase(y));//ture
 		
-		// 2. Stringª«¥ó¯S©Ê (10-1-2)
-		// (1) toString()¤èªk: ¡u«DStringª«¥ó¡vªº¦Û°ÊÂà«¬		
+		// 2. Stringç‰©ä»¶ç‰¹æ€§ (10-1-2)
+		// (1) toString()æ–¹æ³•: ã€ŒéStringç‰©ä»¶ã€çš„è‡ªå‹•è½‰å‹		
 
 		
-		// 2-(1)-B ¥DÃş§O
+		// 2-(1)-B ä¸»é¡åˆ¥
 		Student s1 = new Student("Joy");
 		System.out.println("i am " + s1);
 		String s2 = "Smart ";
 		String s3 = s2 + s1;
 		System.out.println("i am " + s3); //i am Smart Joy
 
-		// (2) Stringª«¥ó¤º®e²£¥Í«á, µLªk§ó§ï
+		// (2) Stringç‰©ä»¶å…§å®¹ç”¢ç”Ÿå¾Œ, ç„¡æ³•æ›´æ”¹
 		
 		//////////////////////////////////////////////////////////////////////////
 		
-		// (¤G) ¦UºØStringÃş§Oªº¡u¤èªk¡v(method) (10-2)
+		// (äºŒ) å„ç¨®Stringé¡åˆ¥çš„ã€Œæ–¹æ³•ã€(method) (10-2)
 		// 1. charAt(int index)
-		a = "³o¬O¤@­Ó´ú¸Õ¦r¦ê"; // 0³o1¬O2¤@3­Ó4´ú5¸Õ6¦r7¦ê (¯Á¤Ş¸¹½X: index)
-		System.out.println("¯Á¤Ş0ªº¦r¤¸: " + a.charAt(0));
-		System.out.println("¯Á¤Ş5ªº¦r¤¸: " + a.charAt(5));
+		a = "é€™æ˜¯ä¸€å€‹æ¸¬è©¦å­—ä¸²"; // 0é€™1æ˜¯2ä¸€3å€‹4æ¸¬5è©¦6å­—7ä¸² (ç´¢å¼•è™Ÿç¢¼: index)
+		System.out.println("ç´¢å¼•0çš„å­—å…ƒ: " + a.charAt(0));
+		System.out.println("ç´¢å¼•5çš„å­—å…ƒ: " + a.charAt(5));
 		
-		// 2. ¦r¦ê¤ñ¸û»P¥]§t
+		// 2. å­—ä¸²æ¯”è¼ƒèˆ‡åŒ…å«
 		// (1) int compareTo(String anotherString)
 		a = "abcd";
 		System.out.println(a.compareTo("abcb"));//2
@@ -91,7 +91,7 @@ public class Ch10_Part1 {
 		System.out.println(a.compareToIgnoreCase("ABCD"));//0
 		System.out.println(a.compareToIgnoreCase("ABCE"));//-1
 		
-		// (3) boolean contains(CharSequence s) // ¤¶­±¡AString ±µ¤f¡A ¥iÅÜ
+		// (3) boolean contains(CharSequence s) // ä»‹é¢ï¼ŒString æ¥å£ï¼Œ å¯è®Š
 		a = "abcd";
 		System.out.println(a.contains("abcd"));//ture
 		System.out.println(a.contains("abc"));//ture
@@ -105,91 +105,92 @@ public class Ch10_Part1 {
 		System.out.println(a.startsWith("ab"));//true
 		
 		// 3. void getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)
-		a = "³o¬O¤@­Ó´ú¸Õ¦r¦ê"; // 0³o1¬O2¤@3­Ó4´ú5¸Õ6¦r7¦ê
+		a = "é€™æ˜¯ä¸€å€‹æ¸¬è©¦å­—ä¸²"; // 0é€™1æ˜¯2ä¸€3å€‹4æ¸¬5è©¦6å­—7ä¸²
 		char [] chars = new char[4];
 		a.getChars(1, 5, chars, 0);
 		System.out.println(new String(chars));//1234
 		
-		// 4. index¯Á¤Ş
-		// (1) int indexOf(int ch)//char «¬§O¹ê»Ú¤W¬O¥ÎUnicode¡A½d³ò¬O±q0~65535
-		a = "³o¬O¤@­Ó´ú¸Õ¦r¦êÆgÆgÆg"; // 0³o1¬O2¤@3­Ó4´ú5¸Õ6¦r7¦ê8Æg9Æg10Æg
-		System.out.println(a.indexOf('´ú')); //4
-		System.out.println(a.indexOf('ªÅ'));//-1
-		System.out.println(a.indexOf('Æg')); //8
+		// 4. indexç´¢å¼•
+		// (1) int indexOf(int ch)//char å‹åˆ¥å¯¦éš›ä¸Šæ˜¯ç”¨Unicodeï¼Œç¯„åœæ˜¯å¾0~65535
+		a = "é€™æ˜¯ä¸€å€‹æ¸¬è©¦å­—ä¸²è®šè®šè®š"; // 0é€™1æ˜¯2ä¸€3å€‹4æ¸¬5è©¦6å­—7ä¸²8è®š9è®š10è®š
+		System.out.println(a.indexOf('æ¸¬')); //4
+		System.out.println(a.indexOf('ç©º'));//-1
+		System.out.println(a.indexOf('è®š')); //8
 		
 		// int lastIndexOf(int ch)
-		System.out.println(a.lastIndexOf('Æg'));//10
+		System.out.println(a.lastIndexOf('è®š'));//10
 	 	
 		// (2) int indexOf(int ch, int fromIndex)
-		System.out.println(a.indexOf('Æg', 9));//9
-		System.out.println(a.lastIndexOf('Æg', 9));//9
+		System.out.println(a.indexOf('è®š', 0));//8
+		System.out.println(a.lastIndexOf('è®š', 10));//10
 		
 		// (3) int indexOf(String str)
-		System.out.println(a.indexOf("´ú¸Õ"));//4
-		System.out.println(a.indexOf("¦r²Å"));//-1
-		System.out.println(a.indexOf("ÆgÆg"));//8
-		System.out.println(a.lastIndexOf("ÆgÆg"));//9
+		System.out.println(a.indexOf("æ¸¬è©¦"));//4
+		System.out.println(a.indexOf("å­—ç¬¦"));//-1
+		System.out.println(a.indexOf("è®šè®š"));//8
+		System.out.println(a.lastIndexOf("è®šè®šè®š"));//8
 		
 		// (4) int indexOf(String str, int fromIndex)
-		System.out.println(a.indexOf("ÆgÆg", 9));
-		System.out.println(a.lastIndexOf("ÆgÆg", 9));
+		System.out.println(a.indexOf("è®šè®š", 9));
+		System.out.println(a.lastIndexOf("ä¸²è®šè®š",7));
 		
-		// 5. Äİ©Ê
-		b = "   " ; // ¤T­ÓªÅ¥Õ
-		// (1) boolean isEmpty() ªÅªº
+		// 5. å±¬æ€§
+		b = "   " ; // ä¸‰å€‹ç©ºç™½
+		// (1) boolean isEmpty() ç©ºçš„
 		System.out.println(b.isEmpty());//false
-		// (2) boolean isBlank() ªÅ¥Õ
+		// (2) boolean isBlank() ç©ºç™½
 		System.out.println(b.isBlank());//ture
-		// (3) boolean length() ªø«×
+		// (3) boolean length() é•·åº¦
 		System.out.println(b.length());//3
 		
-		// 6. ¦r¦ê¨ú¥N
-		// (1) String replace (char oldChar, char newChar) (³æ¤Ş¸¹)
-		a = "³o¬O¤@­Ó´ú¸Õ¦r¦ê";
-		System.out.println(a.replace('´ú','¦Ò'));
+		// 6. å­—ä¸²å–ä»£
+		// (1) String replace (char oldChar, char newChar) (å–®å¼•è™Ÿ)
+		a = "é€™æ˜¯ä¸€å€‹æ¸¬è©¦å­—ä¸²";
+		System.out.println(a.replace('æ¸¬','è€ƒ'));
 		System.out.println(a);
 		
-		// (2) String replace (charSequence target, charSequence replacement) (Âù¤Ş¸¹)
-		a = "³o¬O¤@­Ó´ú¸Õ¦r¦ê"; // 0³o1¬O2¤@3­Ó4´ú5¸Õ6¦r7¦ê
-		System.out.println(a.replace("´ú¸Õ","¥¿¦¡"));
+		// (2) String replace (charSequence target, charSequence replacement) (é›™å¼•è™Ÿ)
+		a = "é€™æ˜¯ä¸€å€‹æ¸¬è©¦å­—ä¸²"; // 0é€™1æ˜¯2ä¸€3å€‹4æ¸¬5è©¦6å­—7ä¸²
+		System.out.println(a.replace("æ¸¬è©¦","æ­£å¼"));
 		System.out.println(a);
 		
-		// 7. ¶}ÀY¦r»Pµ²§À¦r
+		// 7. é–‹é ­å­—èˆ‡çµå°¾å­—
 		// (1) boolean startsWith(String prefix)  
 		// (2) boolean startsWith(String prefix, int offset)  
 		// (3) boolean endsWith(String prefix)
-		// (µL¦¹¥\¯à) boolean endsWith(String prefix, int offset)
+		// (ç„¡æ­¤åŠŸèƒ½) boolean endsWith(String prefix, int offset)
 		
 		a = "abcd"; // 0a 1b 2c 3d
 		System.out.println(a.startsWith("cd")); //false
 		System.out.println(a.startsWith("cd", 2));//true
 		System.out.println(a.endsWith("cd")); //true
-		// System.out.println(a.endsWith("cd", 2)); //µL¦¹¥\¯à
+		// System.out.println(a.endsWith("cd", 2)); //ç„¡æ­¤åŠŸèƒ½
 		
-		// 8. ¤l¦r¦ê
+		// 8. å­å­—ä¸²
 		// (1) String substring (int beginIndex)
 		// (2) String substring (int beginIndex, int endIndex)
-		a = "³o¬O¤@­Ó´ú¸Õ¦r¦ê"; // 0³o1¬O2¤@3­Ó4´ú5¸Õ6¦r7¦ê
+		a = "é€™æ˜¯ä¸€å€‹æ¸¬è©¦å­—ä¸²"; // 0é€™1æ˜¯2ä¸€3å€‹4æ¸¬5è©¦6å­—7ä¸²
 		System.out.println(a.substring(4));
-		System.out.println(a.substring(4, 6));
-		
-		// 9. ¤j¤p¼gÂà´«
+		System.out.println(a.substring(6, 8));//å­—ä¸²
+
+		// 9. å¤§å°å¯«è½‰æ›
 		// (1) String toLowerCase()
 		// (2) String toUpperCase()
 		a = "ABcd";
 		System.out.println(a.toLowerCase()); 
 		System.out.println(a.toUpperCase());
 		
-		// 10. ¥hÀY§Àªº¡uªÅ¥Õ¡v»P¡u¯S®í¦r¤¸¡v
-		// (1) String trim() ¥hÀY§Àªº¡uªÅ¥Õ¡v»P¡u¯S®í¦r¤¸¡v (¤£§t¡uUnicodeªÅ¥Õ¡v)
-		a = " \t ³o¬O¤@­Ó´ú¸Õ¦r¦ê"; // 0 1\t2 3³o4¬O5¤@6­Ó7´ú8¸Õ9¦r10¦ê
+		// 10. å»é ­å°¾çš„ã€Œç©ºç™½ã€èˆ‡ã€Œç‰¹æ®Šå­—å…ƒã€
+		// (1) String trim() å»é ­å°¾çš„ã€Œç©ºç™½ã€èˆ‡ã€Œç‰¹æ®Šå­—å…ƒã€ (ä¸å«ã€ŒUnicodeç©ºç™½ã€)
+		a = " \t é€™æ˜¯ä¸€å€‹æ¸¬è©¦å­—ä¸²"; // 0 1\t2 3é€™4æ˜¯5ä¸€6å€‹7æ¸¬8è©¦9å­—10ä¸²
 		System.out.println(a); 
 		System.out.println(a.trim()); 
 		System.out.println(a); 
 		
-		// (2) String stip() ¥hÀY§Àªº¡uªÅ¥Õ¡v»P¡u¯S®í¦r¤¸¡v (§t¡uUnicodeªÅ¥Õ¡v)
-		// (3) String stipLeading() ¥hÀYºİªº¡uªÅ¥Õ¡v»P¡u¯S®í¦r¤¸¡v (§t¡uUnicodeªÅ¥Õ¡v)
-		// (4) String stipTrailing() ¥h§Àºİªº¡uªÅ¥Õ¡v»P¡u¯S®í¦r¤¸¡v (§t¡uUnicodeªÅ¥Õ¡v)
+		
+		// (2) String stip() å»é ­å°¾çš„ã€Œç©ºç™½ã€èˆ‡ã€Œç‰¹æ®Šå­—å…ƒã€ (å«ã€ŒUnicodeç©ºç™½ã€)
+		// (3) String stipLeading() å»é ­ç«¯çš„ã€Œç©ºç™½ã€èˆ‡ã€Œç‰¹æ®Šå­—å…ƒã€ (å«ã€ŒUnicodeç©ºç™½ã€)
+		// (4) String stipTrailing() å»å°¾ç«¯çš„ã€Œç©ºç™½ã€èˆ‡ã€Œç‰¹æ®Šå­—å…ƒã€ (å«ã€ŒUnicodeç©ºç™½ã€)
 		
 		// 11. String repeat (int count)
 		a = "ABc";
