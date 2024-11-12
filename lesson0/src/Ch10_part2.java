@@ -94,7 +94,7 @@ public class Ch10_part2 {
 		// 方法2: 用matches()
 		do {
 			isInteger = true;
-			System.out.print("請輸入整數: ");  // 123 (0:1 1:2 2:3)
+			System.out.println("請輸入整數: ");  // 123 (0:1 1:2 2:3)
 			str = sc.next(); 
 			
 			if(!str.matches("[0-9]+")) { //不是整數
