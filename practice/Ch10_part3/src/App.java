@@ -24,7 +24,7 @@ public class App {
                     isDigit = true;
                 }
             }
-        }
+        }while(!isPWFormatted);
 
     }
 }
