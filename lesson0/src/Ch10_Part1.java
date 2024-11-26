@@ -198,4 +198,3 @@ public class Ch10_Part1 {
 		System.out.println("OK".repeat(3));
 	}
 }
-
