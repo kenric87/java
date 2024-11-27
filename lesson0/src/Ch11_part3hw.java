@@ -15,26 +15,34 @@ class teacher extends person{
     public void showinfo(teacher s){
         System.out.println(s.toString());    
     }
-        }
-    class student extends person{
-        private String number1;
-        private int grade;
-        student(String name, int bday,String number1,int grade) {
-            this.name=name;
-            this.bday=bday;
-            this.name=name;
-            this.number1=number1;
-            this.grade=grade;
-        }
-        public String toString() {
-            return "名字: "+name+" 生日: "+bday+" 學號: "+number1+" 年級: "+grade;
-        }
-        public void showinfo(student s){
-            System.out.println(s.toString());    
+}
+class student extends person{
+    private String number1;
+    private int grade;
+    student(String name, int bday,String number1,int grade) {
+        this.name=name;
+        this.bday=bday;
+        this.name=name;
+        this.number1=number1;
+        this.grade=grade;
+    }
+    public String toString() {
+        return "名字: "+name+" 生日: "+bday+" 學號: "+number1+" 年級: "+grade;
+    }
+    public void showinfo(student s){
+        System.out.println(s.toString());    
+    }
+}
+class Show{
+    public void showAllInfo(person... ps){
+        for(person p:ps){
+            System.out.println(p.toString());
         }
     }
-    
-public class Ch11_hw {
+
+}
+
+public class Ch11_part3hw {
     public static void main(String[] args) {
         teacher t1= new teacher("葉先生",820605,"羅社不上課");
         teacher t2= new teacher("ye",820605,"羅");
@@ -48,5 +56,10 @@ public class Ch11_hw {
         System.out.println(s2.toString());
         s1.showinfo(s1);
         s1.showinfo(s2);
+
+
+        //新的
+        Show ss = new Show();
+        ss.showAllInfo(t1, t2, s1, s2);
     }
 }
