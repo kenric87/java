@@ -244,7 +244,7 @@ public class Ch11 {
 		p=c3;
 		p.Show();
 	    // 狀況2
-		/*
+		
 	    // (2) 編譯錯誤
 		p=c3;
 		//p.show("測試");//<=====編譯錯誤(這樣不行)
@@ -266,7 +266,7 @@ public class Ch11 {
 		Calculator ca =new Calculator(3000.0);
 		System.out.println("C這塊地值"+ca.calculatePrice(c));
 		System.out.println("C這塊地值"+ca.calculatePrice(s));
-        */
+        
 	}
         
 }
