@@ -34,7 +34,7 @@ class Cylinder extends Circle {
 
 }
 
-public class App {
+public class point1 {
     public static void main(String[] args) {
         Cylinder cr = new Cylinder(1, 2, 3, 4);
         System.out.println(cr);
