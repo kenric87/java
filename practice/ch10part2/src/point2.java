@@ -1,3 +1,5 @@
+//這個程式主要是用matches來做有很多搭配的應用
+
 import java.util.*;
 
 public class point2 {
