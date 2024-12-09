@@ -1,20 +1,3 @@
-//多型(Polymorphism)
-class Parent {
-    public void Show () {
-        System.out.println("I'm father.");
-    }
-}
-
-class Child4 extends Parent {
-    public void Show() {
-        System.out.println("I'm children4.");
-    }
-    public void Show(String str) {
-        System.out.println(str);
-    }
-}
-
-//應用
 class Land {
     double getArea() {
         return 0;
@@ -56,20 +39,11 @@ class Circle extends Land {
         return l.getArea() * price;
     }
  }
-
-public class point2 {
+public class App {
     public static void main(String[] args) {
-        Parent p = new Parent();
-        Child4 c4 = new Child4();
-
-        p.Show();
-        c4.Show();
-        c4.Show("hello");
-
-
         Circle c = new Circle(1);
         Square s = new Square(1);
-        Calculator cal = new Calculator(100);
+        Calculator cal = new Calculator(10);
 
         System.out.println("circle price = " + cal.CalcPrice(c));
         System.out.println("square price = " + cal.CalcPrice(s));
