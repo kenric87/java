@@ -1,51 +1,42 @@
-class person{
-    protected String name;
-    protected int bday;
+//繼承
+class Circle{
+    //這邊的參數就不會用private
+    //改用protected，這樣才可以繼承
+    protected double x, y;
+    protected double r;
+
+    Circle(double x, double y, double r) {
+        this.x = x;
+        this.y = y;
+        this.r = r;
+    }
+    Circle() {}//這是好習慣，要記得建立無參數的建構方法
+    public void setCenter (double x, double y) {
+        this.x = x;
+        this.y = y;
+    }
+    public void setR (double r) {
+        this.r = r;
+    }
+    public String toString() {
+        return "圓心: (" + x + "," + y + "), 半徑: " + r;
+    }
+    //要記得toString下面的是return
 }
-class teacher extends person{
-    private String subject;
-    teacher(String name, int bday,String subject) {
-        this.name=name;
-        this.bday=bday;
-        this.subject=subject;
+
+class Cylinder extends Circle {
+    private double h;   //可以用private是因為這邊不用再繼續繼承下去了
+    Cylinder (double x, double y, double r, double h){
+        super(x, y, r);
+        //在 Java 中，super() 是用來呼叫父類別的建構方法
+        this.h = h;
     }
-    public String toString() {  
-        return "名字: "+name+" 生日: "+bday+" 教授科目:"+subject;
-    }
-    public void showinfo(teacher s){
-        System.out.println(s.toString());    
-    }
-        }
-    class student extends person{
-        private String number1;
-        private int grade;
-        student(String name, int bday,String number1,int grade) {
-            this.name=name;
-            this.bday=bday;
-            this.name=name;
-            this.number1=number1;
-            this.grade=grade;
-        }
-        public String toString() {
-            return "名字: "+name+" 生日: "+bday+" 學號: "+number1+" 年級: "+grade;
-        }
-        public void showinfo(student s){
-            System.out.println(s.toString());    
-        }
-    } 
+
+}
+
 public class App {
     public static void main(String[] args) {
-        teacher t1= new teacher("葉",820605,"羅社");
-        teacher t2= new teacher("ye",700625,"邏輯設計實驗");
-        System.out.println(t1.toString());
-        System.out.println(t2.toString());
-        t1.showinfo(t1);
-        t2.showinfo(t2);
-        student s1= new student("王凱立",910807,"b1021210",4);
-        student s2= new student("王先生",910605,"b1021169",12);
-        System.out.println(s1.toString());
-        System.out.println(s2.toString());
-        s1.showinfo(s1);
-        s1.showinfo(s2);
+        Cylinder cr = new Cylinder(1, 2, 3, 4);
+        System.out.println(cr);
     }
 }
