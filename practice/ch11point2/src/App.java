@@ -43,7 +43,7 @@ public class App {
     public static void main(String[] args) {
         Circle c = new Circle(1);
         Square s = new Square(1);
-        Calculator cal = new Calculator(10);
+        Calculator cal = new Calculator(100);
 
         System.out.println("circle price = " + cal.CalcPrice(c));
         System.out.println("square price = " + cal.CalcPrice(s));

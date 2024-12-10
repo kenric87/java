@@ -22,9 +22,9 @@ class Land {
     }
 }
 
-class Circle extends Land {
+class Circle1 extends Land {
     int r;
-    Circle (int r) {
+    Circle1 (int r) {
         this.r = r;
     }
     double getArea () {
@@ -67,7 +67,7 @@ public class point2 {
         c4.Show("hello");
 
 
-        Circle c = new Circle(1);
+        Circle1 c = new Circle1(1);
         Square s = new Square(1);
         Calculator cal = new Calculator(100);
 
