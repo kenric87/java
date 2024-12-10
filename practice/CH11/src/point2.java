@@ -32,7 +32,7 @@ class Circle1 extends Land {
     }
 }
 
- class Square extends Land {
+class Square extends Land {
     int d;
     Square (int d) {
         this.d = d;
@@ -40,9 +40,9 @@ class Circle1 extends Land {
     double getArea() {
         return d * d;
     }
- }
+}
 
- class Calculator {
+class Calculator {
     double price;
     Calculator(double price) {
         this.price = price;
@@ -55,7 +55,7 @@ class Circle1 extends Land {
     double CalcPrice(Land l) {
         return l.getArea() * price;
     }
- }
+}
 
 public class point2 {
     public static void main(String[] args) {
