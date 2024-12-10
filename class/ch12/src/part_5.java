@@ -14,8 +14,8 @@ class Sort {
 		// 以下為氣泡排序法 由大排到小
 		for(int i = objs.length - 1; i > 0; i--) {
 			for(int j = 0; j < i; j++) {
-				if(objs[j].compare(objs[j + 1]) < 0) { 
-				//  意思就是:「if ( objs[j] < objs[j + 1] )」
+				if(objs[j].compare(objs[j + 1]) < 0) {
+				// 意思就是:「if ( objs[j] < objs[j + 1] )」
 				// 直接用「實作方法的compare()」，因為「實作類別」必須「實作此方法」
 					ICC temp = objs[j];
 					objs[j] = objs[j + 1];
